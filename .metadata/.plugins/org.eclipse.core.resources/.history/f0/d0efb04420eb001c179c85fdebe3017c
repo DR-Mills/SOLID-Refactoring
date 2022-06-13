@@ -1,0 +1,5 @@
+package gc.classroom;
+
+public interface blah {
+
+}

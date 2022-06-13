@@ -1,0 +1,10 @@
+
+public interface ScenePrinter {
+	
+	public void printInfo();
+	
+	public void printScenes();
+	
+	public String getPrinterFriendlyScene(String scene);
+	
+}

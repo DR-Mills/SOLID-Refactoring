@@ -1,0 +1,19 @@
+INDEX VERSION 1.131+D:\DMills\GC\Lab4.4-SOLID-Refactoring\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3229171201.index
+3004407090.index
+2916787624.index
+2871254956.index
+588982259.index
+634319995.index
+320620516.index
+1615490402.index
+2378836263.index
+130235529.index
+760091825.index
+3468323961.index
+124000375.index
+2814482381.index
+714061294.index
+255670959.index
+179231235.index

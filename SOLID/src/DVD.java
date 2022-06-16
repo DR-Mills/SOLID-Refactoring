@@ -1,29 +1,33 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class DVD extends Movie {
+public class DVD implements Play {
 
-	// variables
 	private int playCounter = 0;
-
-	// constructor
-	public DVD(String title, int runTime, ArrayList<String> scenes) {
-		super(title, runTime, scenes);
-	}
+	
 	
 	public void setPlayCounter(int playCounter) {
 		this.playCounter = playCounter;
 	}
-
-	// methods
+	
 	@Override
-	public void play() {
+	public void play(ArrayList<String> scenes) {
 		if (playCounter < 1) {
-			printScenes();
+			ScenePrinter.printScenes(scenes);
 			playCounter = 1;
 		}
-		int sceneChoice = validator.integerWithinRange("Which scene of " + getTitle() + " would you like to watch? ",
-				scnr, 0, getScenes().size() - 1);
-		System.out.println("\nScene " + sceneChoice + ":\n" + getPrinterFriendlyScene(getScenes().get(sceneChoice)));
+		
+		int sceneChoice = Validator.integerWithinRange("Which scene would you like to watch? ",
+				new Scanner(System.in), 0, scenes.size() - 1);
+		
+		System.out.println("\nScene " + sceneChoice + ":\n" + ScenePrinter.getPrinterFriendlyScene(scenes.get(sceneChoice)));
 	}
+
+
+
+
+
+
 
 }

@@ -1,16 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public class VHS extends Movie {
-	
-	// instance variables
+public class VHS implements Play {
+
 	private int currentTime;
-
 	
-	// constructor
-	public VHS(String title, int runTime, ArrayList<String> scenes) {
-		super(title, runTime, scenes);
-	}
-
 	
 	// getters & setters
 	public int getCurrentTime() {
@@ -21,15 +15,12 @@ public class VHS extends Movie {
 		this.currentTime = currentTime;
 	}
 
-
-
-	// methods
-	@Override
-	public void play() {
+	
+	public void play(ArrayList<String> scenes) {
 		System.out.println();
-		System.out.println("Scene " + currentTime + ":\n" + getPrinterFriendlyScene(getScenes().get(currentTime)));
+		System.out.println("Scene " + currentTime + ":\n" + ScenePrinter.getPrinterFriendlyScene(scenes.get(currentTime)));
 		currentTime++;
-		if (currentTime > getScenes().size()-1) {
+		if (currentTime > scenes.size()-1) {
 			rewind();
 		}
 	}

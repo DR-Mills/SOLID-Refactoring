@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Validator {
 
 	// validates whole integer within given range
-	public int integerWithinRange(String promptMsg, Scanner scnr, int min, int max) {
+	public static int integerWithinRange(String promptMsg, Scanner scnr, int min, int max) {
 		int returnValue = 0;
 		boolean keepGoing = true;
 		
@@ -33,7 +33,7 @@ public class Validator {
 	// overloaded method
 	// validates input as "y" (or "yes") or "n" (or "no") and returns boolean y =
 	// true, n = false.
-	public boolean userContinueYorN(String promptMsg, Scanner scnr) {
+	public static boolean userContinueYorN(String promptMsg, Scanner scnr) {
 		String userInput = null;
 		boolean invalidInput = true;
 		boolean userContinues = false;
@@ -65,7 +65,7 @@ public class Validator {
 	// overloaded method
 	// validates input as "y" (or "yes") or "n" (or "no") and returns boolean y =
 	// true, n = false.
-	public boolean userContinueYorN(String promptMsg, String goodbyeMsg, Scanner scnr) {
+	public static boolean userContinueYorN(String promptMsg, String goodbyeMsg, Scanner scnr) {
 		String userInput = null;
 		boolean invalidInput = true;
 		boolean userContinues = false;
@@ -94,7 +94,7 @@ public class Validator {
 		return userContinues;
 	}
 
-	public String stringLettersOnly(String prompt, Scanner scnr) {
+	public static String stringLettersOnly(String prompt, Scanner scnr) {
 		boolean tryAgain = true;
 		String userString;
 		
